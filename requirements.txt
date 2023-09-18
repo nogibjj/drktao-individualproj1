@@ -2,8 +2,6 @@ pandas==2.1.0
 matplotlib
 ruff
 nbval
-jupyter
-tabulate
 
 pylint
 pytest
