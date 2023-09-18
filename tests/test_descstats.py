@@ -1,5 +1,5 @@
-from descstats import denirostats
-from descstats import denirohist
+from src.descstats import denirostats
+from src.descstats import denirohist
 
 
 def test_deniro():

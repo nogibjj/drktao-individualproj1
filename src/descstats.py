@@ -29,5 +29,5 @@ def denirohist(file):
     plt.show()
 
 
-print(denirostats("deniro.csv"))
-denirohist("deniro.csv")
+print(denirostats("data/deniro.csv"))
+denirohist("data/deniro.csv")
