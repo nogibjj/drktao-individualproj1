@@ -4,12 +4,15 @@ install:
 
 format:
 	black *.py
-
+	nbqa black *.ipynb 
 lint:
-	pylint --disable=R,C main.py
-
+	ruff check *.py
+	nbqa ruff *.ipynb
+	
 test:
-	python -m pytest -vv --cov=main test_main.py
+	python -m pytest -vv --cov=descstats test_descstats.py
+	python -m pytest -vv --cov=lib test_lib.py
+	python -m pytest --nbval *.ipynb
 
 all: 
 	install format lint test
