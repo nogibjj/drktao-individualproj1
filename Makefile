@@ -3,16 +3,16 @@ install:
 		pip install -r requirements.txt
 
 format:
-	black *.py
-	nbqa black *.ipynb 
+	black src/*.py
+	nbqa black src/*.ipynb 
 lint:
-	ruff check *.py
-	nbqa ruff *.ipynb
+	ruff check src/*.py
+	nbqa ruff src/*.ipynb
 	
 test:
-	python -m pytest -vv --cov=descstats test_descstats.py
-	python -m pytest -vv --cov=lib test_lib.py
-	python -m pytest --nbval *.ipynb
+	python -m pytest -vv --cov=src.descstats test_descstats.py
+	python -m pytest -vv --cov=src.lib test_lib.py
+	python -m pytest --nbval src/*.ipynb
 
 all: 
 	install format lint test
