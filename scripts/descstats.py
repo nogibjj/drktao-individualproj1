@@ -1,33 +1,25 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import statistics
+import lib
 
 
-def denirostats(file):
-    df = pd.read_csv(file)
+def denirostats(data, feature):
     sumstats = pd.DataFrame(
         {
-            "Mean Score": round(df.iloc[:, 1].mean(), 2),
-            "Median Score": round(df.iloc[:, 1].median(), 2),
-            "Standard Deviation of Scores": round(statistics.stdev(df.iloc[:, 1]), 2),
+            "Mean Score": round(lib.compute_mean(data, feature), 2),
+            "Median Score": round(lib.compute_median(data, feature), 2),
+            "Standard Deviation of Scores": round(lib.compute_std(data, feature), 2),
         },
         index=[0],
     )
     return sumstats
 
 
-def denirohist(file):
-    df = pd.read_csv(file)
-    plt.hist(
-        df.iloc[:, 1],
-        bins=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-        edgecolor="black",
-    )
-    plt.title("Rotten Tomatoes Score Distribution of Robert De Niro Movies")
-    plt.xlabel("Score")
-    plt.ylabel("Frequency")
-    plt.show()
+def denirohist(data, feature):
+    lib.visualize_hist(data, feature)
 
 
-print(denirostats("data/deniro.csv"))
-denirohist("data/deniro.csv")
+if __name__ == "__main__":
+    data = pd.read_csv("data/deniro.csv")
+    feature = "Score"
+    print(denirostats(data, feature))
+    denirohist(data, feature)
