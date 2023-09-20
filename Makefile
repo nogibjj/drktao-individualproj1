@@ -14,6 +14,6 @@ test:
 	python -m pytest --nbval scripts/*.ipynb
 
 report:
-	python -m scripts/descstats.py
+	python -m scripts/descstats
 all: 
 	install format lint test
