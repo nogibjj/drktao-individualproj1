@@ -32,6 +32,6 @@ def visualize_hist(data, feature):
 if __name__ == "__main__":
     df = pd.read_csv("data/deniro.csv")
     col = "Score"
-    print("Mean: ", compute_mean(df, col))
-    print("Median: ", compute_median(df, col))
-    print("Standard Deviation: ", compute_std(df, col))
+    print("Mean RT Score: ", round(compute_mean(df, col), 2))
+    print("Median RT Score: ", round(compute_median(df, col), 2))
+    print("Standard Deviation of RT Scores: ", round(compute_std(df, col), 2))
