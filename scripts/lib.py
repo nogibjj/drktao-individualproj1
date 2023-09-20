@@ -3,17 +3,17 @@ import matplotlib.pyplot as plt
 
 
 def compute_mean(data, feature):
-    data_mean = data[feature].mean()
+    data_mean = round(data[feature].mean(),2)
     return data_mean
 
 
 def compute_median(data, feature):
-    data_median = data[feature].median()
+    data_median = round(data[feature].median(),2)
     return data_median
 
 
 def compute_std(data, feature):
-    data_std = data[feature].std()
+    data_std = round(data[feature].std(),2)
     return data_std
 
 

@@ -1,7 +1,7 @@
 from descstats import denirostats
 from descstats import denirohist
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/deniro.csv")
 col = "Score"

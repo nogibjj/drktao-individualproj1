@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from lib import compute_mean, compute_median, compute_std, visualize_hist
 
 df = pd.read_csv("data/deniro.csv")
