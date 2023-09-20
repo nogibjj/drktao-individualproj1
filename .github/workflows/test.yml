@@ -11,6 +11,3 @@ jobs:
     - name: Test with Pytest
       run: |
         make test
-    - name: Add_commit_push
-      run: |
-        make add_commit_push
