@@ -13,7 +13,5 @@ test:
 	python -m pytest -vv --cov=scripts scripts/test_*.py
 	python -m pytest --nbval scripts/*.ipynb
 
-report:
-	python -m scripts scripts/descstats.py
 all: 
 	install format lint test
