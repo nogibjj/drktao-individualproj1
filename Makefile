@@ -10,8 +10,7 @@ lint:
 	nbqa ruff scripts/*.ipynb
 	
 test:
-	python -m pytest -vv --cov=scripts.lib scripts/test_lib.py
-	python -m pytest -vv --cov=scripts.descstats scripts/test_descstats.py
+	python -m pytest -vv --cov=main --cov=scripts scripts/test_*.py
 	python -m pytest --nbval scripts/*.ipynb
 
 all: 
