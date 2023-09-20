@@ -21,5 +21,12 @@ def denirohist(data, feature):
 if __name__ == "__main__":
     df = pd.read_csv("data/deniro.csv")
     col = "Score"
-    print(denirostats(df, col))
+    summary = denirostats(df, col)
     denirohist(df, col)
+    str1 = f"{summary.to_markdown()}"
+    str2 = "![Alt text](visualizations/denirohist.png)"
+
+    file_path = "./report.md"
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(str1 + str2)

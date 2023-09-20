@@ -27,6 +27,8 @@ def visualize_hist(data, feature):
     plt.xlabel("Score")
     plt.ylabel("Frequency")
     plt.show()
+    plt.savefig("visualizations/denirohist.png")
+    return
 
 
 if __name__ == "__main__":

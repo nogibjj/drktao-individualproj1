@@ -3,6 +3,7 @@ matplotlib
 ruff
 nbval
 nbqa
+tabulate
 
 pylint
 pytest
