@@ -29,4 +29,12 @@ if __name__ == "__main__":
     file_path = "./report.md"
 
     with open(file_path, "w", encoding="utf-8") as f:
-        f.write(str1 + "\n"*3 + str2)
+        f.write(
+            "Summary Statistics"
+            + "\n" * 3
+            + str1
+            + "\n" * 3
+            + "Histogram"
+            + "\n" * 3
+            + str2
+        )
