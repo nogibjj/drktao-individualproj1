@@ -24,7 +24,7 @@ if __name__ == "__main__":
     summary = denirostats(df, col)
     denirohist(df, col)
     str1 = f"{summary.to_markdown()}"
-    str2 = "![Alt text](visualizations/denirohist.png)"
+    str2 = "![Alt text](hist_viz.png)"
 
     file_path = "./report.md"
 
