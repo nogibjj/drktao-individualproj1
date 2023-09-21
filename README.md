@@ -16,3 +16,6 @@ This repo builds upon the Week 2 mini-project, in which I used pandas to provide
 Use Github codespaces, which will allow for a container to be built with the required packages, as detailed in `requirements.txt`. To begin, use `make install` in the terminal to install the necessary packages from `requirements.txt`. If any changes are made to any scripts, `make format ` and `make lint` can be used to format and lint the code, respectively. Finally, `make test` can be used to run tests on the files performing data analysis.
 
 To generate a summary report and histogram plot to the repo, use `python scripts/descstats.py`, which will save a .png file of the histogram to the repo, as well as a summary report containing descriptive statistics and the histogram together. 
+
+## Video Demo
+https://www.youtube.com/watch?v=rcQZIxwBUfA
